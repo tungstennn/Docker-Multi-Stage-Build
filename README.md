@@ -44,7 +44,7 @@ Follow these steps to build and run the application on your machine:
 
 ```bash
 git clone https://github.com/tungstennn/Docker-Multi-Stage-Build.git
-cd your-repo-name
+cd Docker-Multi-Stage-Build
 ```
 
 ### 2. Build the Docker Image
