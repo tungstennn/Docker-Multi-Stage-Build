@@ -1,4 +1,3 @@
-# Docker-Multi-Stage-Build-Exercise
 # Node.js Dockerized Application
 
 This project demonstrates how to containerize a simple Node.js application using Docker. The setup employs multi-stage builds for optimizing the Docker image size and security, making it suitable for both development and production environments.
