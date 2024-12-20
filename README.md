@@ -43,7 +43,7 @@ Follow these steps to build and run the application on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/tungstennn/Docker-Multi-Stage-Build.git
 cd your-repo-name
 ```
 
