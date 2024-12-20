@@ -6,10 +6,10 @@ This project demonstrates how to containerize a simple Node.js application using
 
 ## **Features**
 
-- Multi-stage Docker builds.
-- Production-ready configuration using the lightweight `node:alpine` image.
-- Runs the application as a non-root user for added security.
-- Exposes the application on port `3000`.
+- Multi-stage Docker builds
+- Production-ready configuration using the lightweight `node:alpine` image
+- Runs the application as a non-root user for added security
+- Exposes the application on port `3000`
 
 ---
 
@@ -17,9 +17,9 @@ This project demonstrates how to containerize a simple Node.js application using
 
 To run this project on your machine, ensure you have the following installed:
 
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. A terminal application (e.g., PowerShell, Command Prompt, or Terminal).
-3. Basic familiarity with Node.js and Docker.
+1. Docker CLI
+2. A terminal application (e.g., PowerShell, Command Prompt, or Terminal)
+3. Basic familiarity with Node.js and Docker
 
 ---
 
@@ -55,8 +55,8 @@ Use the following command to build the Docker image:
 docker build -t my-node-app .
 ```
 
-- **`-t my-node-app`**: Tags the image with the name `my-node-app`.
-- **`.`**: Specifies the current directory as the context for the Docker build.
+- **`-t my-node-app`**: Tags the image with the name `my-node-app`
+- **`.`**: Specifies the current directory as the context for the Docker build
 
 ### 3. Run the Docker Container
 
@@ -66,11 +66,11 @@ Run the container using the image you just built:
 docker run -p 3000:3000 my-node-app
 ```
 
-- **`-p 3000:3000`**: Maps your local machine's port `3000` to the container's port `3000`.
+- **`-p 3000:3000`**: Maps your local machine's port `3000` to the container's port `3000`
 
 ### 4. Access the Application
 
-- Open your browser and navigate to `http://localhost:3000`.
+- Open your browser and navigate to `http://localhost:3000`
 - You should see the JSON response:
   
   ```json
@@ -96,13 +96,13 @@ To stop the running container:
 The application is containerized using a **multi-stage Dockerfile**:
 
 1. **Development Stage**:
-   - Uses the official `node` image.
-   - Installs dependencies and copies all application files into the container.
+   - Uses the official `node` image
+   - Installs dependencies and copies all application files into the container
 
 2. **Production Stage**:
-   - Uses the lightweight `node:alpine` image.
-   - Copies the necessary files from the development stage.
-   - Runs the application as a non-root user for security.
+   - Uses the lightweight `node:alpine` image
+   - Copies the necessary files from the development stage
+   - Runs the application as a non-root user for security
 
 ---
 
@@ -131,12 +131,12 @@ CMD [ "npm", "start" ]
 ## **Additional Notes**
 
 - **Optimizations**:
-  - Using multi-stage builds reduces image size by excluding development dependencies.
-  - Running as a non-root user enhances security.
+  - Using multi-stage builds reduces image size by excluding development dependencies
+  - Running as a non-root user enhances security
 
 - **Future Enhancements**:
-  - Add health checks to the `Dockerfile` to monitor container health.
-  - Integrate with CI/CD pipelines for automated builds and deployments.
+  - Add health checks to the `Dockerfile` to monitor container health
+  - Integrate with CI/CD pipelines for automated builds and deployments
 
 ---
 
